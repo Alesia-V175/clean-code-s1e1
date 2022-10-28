@@ -5,7 +5,6 @@
 // Solution: Add interactivity so the user can manage daily tasks.
 // Break things down into smaller steps and take each step at a time.
 
-
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput = document.getElementById("new-task"); //Add a new task.
@@ -26,7 +25,7 @@ var createNewTaskElement = function(taskString) {
     var deleteButtonImg = document.createElement("img"); //delete button image
 
     label.innerText = taskString;
-    label.className = 'task';
+    label.className = "task";
 
     //Each elements, needs appending
     checkBox.type = "checkbox";
@@ -37,7 +36,7 @@ var createNewTaskElement = function(taskString) {
     editButton.className = "edit";
 
     deleteButton.className = "delete";
-    deleteButtonImg.src = './remove.svg';
+    deleteButtonImg.src = "./remove.svg";
     deleteButton.appendChild(deleteButtonImg);
 
     //and appending.
@@ -71,7 +70,7 @@ var editTask = function(){
 
     var listItem = this.parentNode;
 
-    var editInput = listItem.querySelector('input[type=text]');
+    var editInput = listItem.querySelector("input[type=text]");
     var label = listItem.querySelector("label");
     var editBtn = listItem.querySelector(".edit");
     var containsClass = listItem.classList.contains("editMode");
@@ -94,7 +93,7 @@ var editTask = function(){
 
 
 //Delete task.
-var deleteTask = function(){
+var deleteTask = function() {
     console.log("Delete Task...");
 
     var listItem = this.parentNode;
@@ -104,7 +103,7 @@ var deleteTask = function(){
 }
 
 //Mark task completed
-var taskCompleted = function(){
+var taskCompleted = function() {
     console.log("Complete Task...");
 
     //Append the task list item to the #completed-tasks
@@ -113,7 +112,7 @@ var taskCompleted = function(){
     bindTaskEvents(listItem, taskIncomplete);
 }
 
-var taskIncomplete = function(){
+var taskIncomplete = function() {
     console.log("Incomplete Task...");
 //Mark task as incomplete.
     //When the checkbox is unchecked
@@ -123,7 +122,7 @@ var taskIncomplete = function(){
     bindTaskEvents(listItem,taskCompleted);
 }
 
-var ajaxRequest=function(){
+var ajaxRequest = function() {
     console.log("AJAX Request");
 }
 
@@ -159,7 +158,7 @@ for (let i = 0; i < incompleteTaskHolder.children.length; i++) {
 }
 
 //cycle over completedTasksHolder ul list items
-for (var i=0; i<completedTasksHolder.children.length;i++){
+for (var i = 0; i < completedTasksHolder.children.length;i++){
     //bind events to list items chldren(tasksIncompleted)
     bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
 }
