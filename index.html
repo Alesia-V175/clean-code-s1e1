@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body">
     <div class="wrapper">
         <aside class="preview-container">
             <img class="preview-img" src="eisenhower-matrix.jpg" alt="the eisenhower matrix" title="The Eisenhower Matrix">
@@ -19,7 +19,7 @@
             <section>
                 <h3 class="section-title">Add Item</h3>
                 <div class="add-task-container">
-                    <input class="new-task-input" type="text">
+                    <input class="input new-task-input" type="text">
                     <button class="button add-button">Add</button>
                  </div>
             </section>
@@ -28,18 +28,18 @@
                 <h3 class="section-title">Todo</h3>
                 <ul class="planned-tasks-list">
                     <li class="task-item">
-                        <input class="checkbox" type="checkbox">
+                        <input class="input checkbox" type="checkbox">
                         <label class="current-task">Pay Bills</label>
-                        <input type="text" class="current-task-input">
+                        <input type="text" class="input current-task-input">
                         <button class="button edit-button">Edit</button>
                         <button class="button delete-button">
                             <img class="delete-icon" src="remove.svg" alt="remove task" title="Remove task">
                         </button>
                     </li>
                     <li class="task-item edit-task-item">
-                        <input class="checkbox" type="checkbox">
-                        <label class="current-task">Go Shopping</label>
-                        <input type="text" value="Go Shopping" class="edit-task-input">
+                        <input class="input checkbox" type="checkbox">
+                        <label class="current-task edit-task-label">Go Shopping</label>
+                        <input type="text" value="Go Shopping" class="input current-task-input edit-task-input">
                         <button class="button edit-button">Save</button>
                         <button class="button delete-button">
                             <img class="delete-icon" src="remove.svg" alt="remove task" title="Remove task">
@@ -52,9 +52,9 @@
                 <h3 class="section-title">Completed</h3>
                 <ul class="completed-tasks-list">
                     <li class="task-item completed-task-item">
-                        <input class="checkbox" type="checkbox" checked>
+                        <input class="input checkbox" type="checkbox" checked>
                         <label class="current-task completed-task-label">See the Doctor</label>
-                        <input type="text" class="current-task-input">
+                        <input type="text" class="input current-task-input">
                         <button class="button edit-button">Edit</button>
                         <button class="button delete-button">
                             <img class="delete-icon" src="remove.svg" alt="remove task" title="Remove task">
