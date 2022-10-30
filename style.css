@@ -12,36 +12,34 @@
   margin: 0 auto;
 }
 
-.preview-container {
+.header-preview {
   text-align: right;
 }
 
-.preview-img {
+.header-preview__img {
   width: 100%;
 }
 
-.article-matrix-link {
+.header-preview__link {
   font-family: fantasy, sans-serif;
 }
 
-.task {
+.task-item__current-task,
+.task-item__current-input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
+  outline: none;
 }
 
-.planned-tasks-list,
-.completed-tasks-list {
+.section-todo__planned-tasks-list,
+.section-completed__completed-tasks-list {
   margin: 0;
   padding: 0;
 }
 
 .task-item {
   list-style: none;
-}
-
-.input {
-  outline: none;
 }
 
 .button {
@@ -73,8 +71,8 @@
   text-transform: uppercase;
 }
 
-.new-task-input,
-.current-task-input {
+.container-add__new-task-input,
+.task-item__current-input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -85,15 +83,16 @@
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
+  outline: none;
 }
 
-.new-task-input:focus,
-.current-task-input:focus {
+.container-add__new-task-input:focus,
+.task-item__current-input:focus {
   color: #333;
 }
 
 /* New Task */
-.new-task-input {
+.container-add__new-task-input {
   width: 82%;
   margin-top: 20px;
 }
@@ -108,11 +107,12 @@
   align-items: center;
 }
 
-.checkbox {
+.task-item__checkbox {
   margin: 0 10px;
+  outline: none;
 }
 
-.current-task {
+.task-item__current-task {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
@@ -120,11 +120,11 @@
   text-decoration: none;
 }
 
-.current-task-input {
+.task-item__current-input {
   width: 226px;
 }
 
-.delete-icon {
+.delete-button__icon {
   display: block;
   width: 42px;
   height: 2em;
@@ -132,7 +132,7 @@
   transition: transform 200ms ease-in;
 }
 
-.delete-icon:hover {
+.delete-button__icon:hover {
   transform: rotateZ(0);
 }
 
@@ -143,22 +143,22 @@
 }
 
 /* Edit Task */
-.current-task-input {
+.task-item__current-input {
   display: none;
 }
 
-.edit-task-item .edit-task-input {
+.task-item_edit .current-input_edit {
   display: inline-block;
   width: 224px;
 }
 
-.edit-task-label {
+.current-task_edit {
   display: none;
 }
 
 @media (max-width: 768px) {
 
-  .preview-container {
+  .header-preview {
     text-align: center;
   }
 
